@@ -1,2 +1,4 @@
-%{"cabbage": {:hex, :cabbage, "0.3.5", "e4b50ee2cf8b2f6ec83507434c6bfd7a768f804caac358f626267e9bc99e7a4e", [], [{:gherkin, "~> 1.4", [hex: :gherkin, repo: "hexpm", optional: false]}], "hexpm"},
+%{"bunt": {:hex, :bunt, "0.2.0", "951c6e801e8b1d2cbe58ebbd3e616a869061ddadcc4863d0a2182541acae9a38", [], [], "hexpm"},
+  "cabbage": {:hex, :cabbage, "0.3.5", "e4b50ee2cf8b2f6ec83507434c6bfd7a768f804caac358f626267e9bc99e7a4e", [], [{:gherkin, "~> 1.4", [hex: :gherkin, repo: "hexpm", optional: false]}], "hexpm"},
+  "credo": {:hex, :credo, "0.8.10", "261862bb7363247762e1063713bb85df2bbd84af8d8610d1272cd9c1943bba63", [], [{:bunt, "~> 0.2.0", [hex: :bunt, repo: "hexpm", optional: false]}], "hexpm"},
   "gherkin": {:hex, :gherkin, "1.6.0", "a7a2925e6153b7f475646e411e45eed657eb8648ae4bec4222334bf46d37798e", [], [], "hexpm"}}
