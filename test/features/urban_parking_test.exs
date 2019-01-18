@@ -2,7 +2,7 @@ defmodule UrbanParkingTest.Features.UrbanParkingTest do
   use Cabbage.Feature, async: false, file: "urban_parking.feature"
 
   setup do
-    %{previous_parked: [], current_parked: []}
+    %{vehicles: []}
   end
 
   defgiven ~r/^Nothing implemented yet$/, _vars, _state do
@@ -11,8 +11,8 @@ defmodule UrbanParkingTest.Features.UrbanParkingTest do
 
   defwhen ~r/^request for realeased spots$/, _vars, state do
     # Your implementation here
-    %{previous_parked: previous_parked, current_parked: current_parked} = state
-    spots = UrbanParking.get_spots(previous_parked, current_parked)
+    %{vehicles: vehicles} = state
+    spots = UrbanParking.get_spots(vehicles)
     {:ok, %{spots: spots}}
   end
 
