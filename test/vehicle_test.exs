@@ -7,6 +7,6 @@ defmodule UrbanParking.VehicleTest do
     vehicle = vehicle |> Map.put(:vin, "1234")
     spot_info = vehicle |> Vehicle.get_spot_info
     assert vehicle != spot_info
-    assert %{coordinates: coordinates, released_at: released_at} = spot_info
+    assert %{coordinates: _coordinates, released_at: _released_at} = spot_info
   end
 end
