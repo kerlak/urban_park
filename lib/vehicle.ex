@@ -32,4 +32,15 @@ defmodule UrbanParking.Vehicle do
       _ -> vehicle
     end
   end
+
+  def from_car2go(vehicle) do
+    %Vehicle{
+      vin: vehicle["vin"],
+      name: vehicle["name"],
+      coordinates: Coordinates.from_car2go(vehicle["coordinates"]),
+      state: :parked,
+      last_parked_ping: DateTime.utc_now()
+    }
+  end
+
 end

@@ -2,6 +2,7 @@ defmodule UrbanParking do
   @moduledoc """
   """
   alias UrbanParking.Vehicle
+  alias UrbanParking.Car2go
 
   defstruct vehicles: []
 
@@ -58,4 +59,10 @@ defmodule UrbanParking do
       end
     end)
   end
+
+  def synchronize(vehicles) do
+    car2go_vehicles = Car2go.get_vehicles()
+    vehicles |> update_vehicles(car2go_vehicles)
+  end
+
 end
