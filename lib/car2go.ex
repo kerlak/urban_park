@@ -4,8 +4,11 @@ defmodule UrbanParking.Car2go do
   alias UrbanParking.Vehicle
   alias Poison.Parser
 
+  @location Application.get_env(:urban_parking, :car2go_location, "LOCATION")
+  @customer_key Application.get_env(:urban_parking, :car2go_customer_key, "CUSTOMER_KEY")
+
   def get_vehicles do
-    vehicles = request_vehicles("LOCATION", "CUSTOMER_TOKEN")
+    vehicles = request_vehicles(@location, @customer_key)
     vehicles |> Enum.map(fn(vehicle) -> Vehicle.from_car2go(vehicle) end)
   end
 

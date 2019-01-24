@@ -34,7 +34,7 @@ defmodule UrbanParking do
     new_vehicles = get_news(vehicles, vehicles_with_updates)
     updated_vehicles = vehicles_with_updates -- new_vehicles
     vehicles = update_info(vehicles, updated_vehicles)
-    vehicles = vehicles ++ new_vehicles
+    vehicles ++ new_vehicles
   end
 
   def get_news(vehicles, vehicles_with_updates) do
