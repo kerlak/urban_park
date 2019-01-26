@@ -22,4 +22,14 @@ defmodule UrbanParking.Car2go do
     %HTTPoison.Response{status_code: 200, body: body} = HTTPoison.get!(url)
     Parser.parse!(body)["placemarks"]
   end
+
+  def change_to_moving(vehicle, vehicles) do
+    vehicle_vin = vehicle.vin
+    case Enum.any?(vehicles, fn(vehicle) -> vehicle.vin == vehicle_vin end) do
+      false ->
+        %Vehicle{vehicle | state: :moving}
+      _ ->
+        vehicle
+    end
+  end
 end
