@@ -30,7 +30,8 @@ defmodule UrbanParking.VehicleTest do
       name: "1234ABC",
       coordinates: %Coordinates{latitude: 33, longitude: 45},
       state: :parked,
-      last_parked_ping: now
+      last_parked_ping: now,
+      type: :car2go
     }
   end
 end

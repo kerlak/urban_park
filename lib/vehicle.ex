@@ -8,7 +8,8 @@ defmodule UrbanParking.Vehicle do
             name: "",
             state: :unknown,
             coordinates: %Coordinates{},
-            last_parked_ping: 0
+            last_parked_ping: 0,
+            type: :none
 
   def get_spot_info(vehicle) do
     %{coordinates: vehicle.coordinates, released_at: vehicle.last_parked_ping}
@@ -39,7 +40,8 @@ defmodule UrbanParking.Vehicle do
       name: vehicle["name"],
       coordinates: Coordinates.from_car2go(vehicle["coordinates"]),
       state: :parked,
-      last_parked_ping: DateTime.utc_now()
+      last_parked_ping: DateTime.utc_now(),
+      type: :car2go
     }
   end
 
