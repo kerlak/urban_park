@@ -1,6 +1,6 @@
 # UrbanParking
 
-**TODO: Add description**
+**Project to detect places to park by using the car sharing APIs data, knowing where cars disappear**
 
 ## Installation
 
